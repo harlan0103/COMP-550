@@ -139,7 +139,7 @@ bool isValid(const Robot &robot, const std::vector<Rectangle> &obstacles)
     switch (robot.type)
     {
         case 'p':
-            return(robot.x, robot.y, obstacles);
+            return isValidPoint(robot.x, robot.y, obstacles);
         case 'c':
             return isValidCircle(robot.x, robot.y, robot.length, obstacles);
         case 's':
